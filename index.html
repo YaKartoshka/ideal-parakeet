@@ -5,29 +5,175 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Сайт Ерасыла</title>
+    <title>Yerassyl's Site</title>
+    <style>
+        /* Общий стиль */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6f0ff;
+            color: #003366;
+            margin: 0;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            text-align: center;
+            color: #0047ab;
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeSlideIn 1s ease-out forwards;
+        }
+
+        h2 {
+            color: #0059b3;
+            transition: color 0.3s;
+        }
+
+        h2:hover {
+            color: #002855;
+        }
+
+        p {
+            line-height: 1.6;
+            animation: fadeIn 1.2s ease-in forwards;
+            opacity: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 70, 140, 0.2);
+            animation: zoomIn 1s ease-out forwards;
+        }
+
+        .guitar-section {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #d0e7ff;
+            border-radius: 10px;
+            animation: slideInUp 1s ease-out forwards;
+            opacity: 0;
+        }
+
+        .guitar-section img {
+            width: 100%;
+            max-width: 400px;
+            display: block;
+            margin: 10px auto;
+            transition: transform 0.4s ease;
+        }
+
+        .guitar-section img:hover {
+            transform: scale(1.05) rotate(-2deg);
+        }
+
+        img {
+            animation: fadeInImage 1.5s ease-out forwards;
+            opacity: 0;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #004c99;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #3399ff;
+            margin: 40px 0;
+            animation: growWidth 1.2s ease-out forwards;
+            transform: scaleX(0);
+        }
+
+        /* Анимации */
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeSlideIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.95);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInImage {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes growWidth {
+            to {
+                transform: scaleX(1);
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <h1 style="text-align: center; color: blue;">This site was created by Yerassyl</h1>
+    <div class="container">
+        <h1>This site was created by Yerassyl</h1>
 
-    <p>
-        Cats are small, agile, and intelligent members of the Felidae family, known for their independence, cleanliness,
-        and playful nature. They are highly developed hunters with keen senses of sight, hearing, and smell. Domestic
-        cats are generally considered to be the smallest member of the Felidae family, with around 73 breeds.
-    </p>
+        <p>
+            Cats are small, agile, and intelligent members of the Felidae family, known for their independence,
+            cleanliness, and playful nature. They are highly developed hunters with keen senses of sight, hearing, and
+            smell. Domestic cats are generally considered to be the smallest member of the Felidae family, with around
+            73 breeds.
+        </p>
 
-    <img src="https://pngimg.com/d/cat_PNG50488.png" width="400" alt="">
+        <img src="https://pngimg.com/d/cat_PNG50488.png" width="400" alt="Cat Image">
 
-    <img src="" alt="">
+        <hr>
 
+        <h2>Услуги</h2>
+        <a target="_blank" href="https://www.apple.com/store">Купить iPhone</a>
 
-    <hr>
-
-    <h2>Услуги</h2>
-
-    <a target="_blank" href="https://www.apple.com/store">Купить Iphone</a>
-
+        <div class="guitar-section">
+            <h2>Моё хобби — игра на гитаре</h2>
+            <p>Я обожаю играть на гитаре! Это помогает мне расслабиться, выразить свои эмоции и создавать музыку. Я
+                изучаю разные стили — от классики до рока.</p>
+            <img src="https://gallery.yopriceville.com/var/albums/Free-Clipart-Pictures/Music-PNG/Classic_Guitar_PNG_Clipart.png?m=1629808672"
+                alt="Guitar Image">
+        </div>
+    </div>
 </body>
 
 </html>
